@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<title>Home page</title>
+</head>
+<body>
+	<!-- Navbar -->
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #283618;">
+		<a class="navbar-brand" href="#">MILITARY INVENTORY</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/Admin">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a class="nav-link" href="additem">Add
+						ITEM</a></li>
+					<li class="nav-item">
+        <a class="nav-link" href="/login">Sign Out</a>
+      </li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Navbar -->
+	
+	<div class="container p-5">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center" style="color: #283618;">Add Item</h4>
+
+						<form th:action="@{/registeritem}" method="post">
+
+							<div class="form-group">
+								<label>Enter Item Name</label> <input type="text"
+									class="form-control" name="name">
+							</div>
+							
+							<div class="form-group">
+								<label>Enter Description</label> <input type="text"
+									class="form-control" name="description">
+							</div>
+
+							<div class="form-group">
+								<label>Enter Quantity</label> <input type="number"
+									class="form-control" name="quantity">
+							</div>
+							
+							<div class="form-group">
+								<label>Enter Location</label> <input type="text"
+									class="form-control" name="location">
+							</div>
+							
+							<div class="form-group">
+								<label>Enter Category</label> 
+								<select class="form-control" name="category">
+								    <option value="Weapon">Weapon</option>
+								    <option value="Transport">Transport</option>
+								    <option value="Aircraft">Aircraft</option>
+								    <option value="Miscallaneous">Miscallaneous</option>
+							    </select>
+							</div>
+							
+							
+							<div class="form-group">
+								<label>Enter In Repair/Non-Available Quantity</label> <input type="number"
+									class="form-control" name="repair">
+							</div>
+
+							<button class="btn btn-block" style="background-color: #283618; color:white;">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
